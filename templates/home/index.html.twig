@@ -1,20 +1,81 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Page d'accueil{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/Mélissa Parceiller/OneDrive - AXE INFORMATIQUE/Olivier dossier perso/Mélissa/DeveloppeurWeb/Checkpoint4_SashiProject/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/Mélissa Parceiller/OneDrive - AXE INFORMATIQUE/Olivier dossier perso/Mélissa/DeveloppeurWeb/Checkpoint4_SashiProject/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
-    </ul>
+<div class="NumCadre">
+        <button class="btn4 btn">
+          <span class="btn4_txt btn_txt">
+             06.00.10.00.00
+          </span>
+        </button>
 </div>
+
+    <div class="welcome">
+        <h2 class="welcome-title">Bienvenue au Salon de Sashi !</h2>
+        <p class="welcome-text">
+            Le bien-être de vos animaux  au centre de mes pratiques professionnelles pour que les soins
+            soient effectués dans le respect et la bienveillance.
+        </p>
+    </div>
+
+
+    <div class="center">
+        <div class="carousel-wrapper">
+            <!-- abstract radio buttons for slides -->
+            <input id="slide1" type="radio" name="controls" checked="checked" />
+            <input id="slide2" type="radio" name="controls" />
+            <input id="slide3" type="radio" name="controls" />
+            <input id="slide4" type="radio" name="controls" />
+            <input id="slide5" type="radio" name="controls" />
+
+            <!-- navigation dots -->
+            <label for="slide1" class="nav-dot"></label>
+            <label for="slide2" class="nav-dot"></label>
+            <label for="slide3" class="nav-dot"></label>
+            <label for="slide4" class="nav-dot"></label>
+            <label for="slide5" class="nav-dot"></label>
+
+            <!-- arrows -->
+            <label for="slide1" class="left-arrow"> < </label>
+            <label for="slide2" class="left-arrow"> < </label>
+            <label for="slide3" class="left-arrow"> < </label>
+            <label for="slide4" class="left-arrow"> < </label>
+            <label for="slide5" class="left-arrow"> < </label>
+
+            <label for="slide1" class="right-arrow"> > </label>
+            <label for="slide2" class="right-arrow"> > </label>
+            <label for="slide3" class="right-arrow"> > </label>
+            <label for="slide4" class="right-arrow"> > </label>
+            <label for="slide5" class="right-arrow"> > </label>
+
+            <div class="carousel">
+                <ul>
+                    <li>
+                        <img src="{{ asset(('images/example_gallery2.jpg')) }}" alt="photo des clients du salon">
+                    </li>
+                    <li>
+                        <img src="{{ asset(('images/example_gallery3.jpg')) }}" alt="photo des clients du salon">
+                    </li>
+                    <li>
+                        <img src="{{ asset(('images/example_gallery4.jpg')) }}" alt="photo des clients du salon">
+                    </li>
+                    <li>
+                        <img src="{{ asset(('images/example_gallery5.jpg')) }}" alt="photo des clients du salon">
+                    </li>
+                    <li>
+                        <img src="{{ asset(('images/example_gallery6.jpg')) }}" alt="photo des clients du salon">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery-title">
+    <button class="button-gallery-title">
+      <a href="{{ path('app_gallery') }}">GALERIE PHOTOS</a>
+    </button>
+    </div>
+
 {% endblock %}

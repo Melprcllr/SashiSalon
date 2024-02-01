@@ -1,42 +1,15 @@
-<nav class="navbar">
-    <div class="container">
-        <section class="wrapper">
-            <img src="{{ asset('assets/images/Logo.png') }}" alt="Logo de l'entreprise, deux S symétriques dans le sens contraire, formant ainsi un coeur">
-            <button type="button" class="burger" id="burger">
-                <span class="burger-line"></span>
-                <span class="burger-line"></span>
-                <span class="burger-line"></span>
-                <span class="burger-line"></span>
-            </button>
-            <div class="menu" id="menu">
-                <ul class="menu-inner">
-                    <li class="menu-item"><a href="#" class="menu-link">Accueil</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Présentation</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Prestations</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Venir au salon</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Me contacter</a></li>
-                </ul>
-            </div>
-        </section>
+<nav class="top-nav">
+    <div class="logo">
+        <img src="{{ asset('images/Logo.png') }}" alt="Logo de l'entreprise">
     </div>
-
-    <script>
-
-        const burgerMenu = document.getElementById("burger");
-        const navbarMenu = document.getElementById("menu");
-
-        // Show and Hide Navbar Menu
-        burgerMenu.addEventListener("click", () => {
-            burgerMenu.classList.toggle("is-active");
-            navbarMenu.classList.toggle("is-active");
-
-            if (navbarMenu.classList.contains("is-active")) {
-                navbarMenu.style.maxHeight = navbarMenu.scrollHeight + "px";
-            } else {
-                navbarMenu.removeAttribute("style");
-            }
-        });
-
-
-    </script>
+    <input id="menu-toggle" type="checkbox" />
+    <label class='menu-button-container' for="menu-toggle">
+        <div class='menu-button'> </div>
+    </label>
+    <ul class="menu">
+        <li><a href="{{ path('app_home') }}">Accueil</a></li>
+        <li><a href="{{ path('app_about') }}">Présentation</a></li>
+        <li><a href="#">Venir au salon</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
 </nav>
