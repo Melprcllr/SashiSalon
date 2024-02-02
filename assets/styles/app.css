@@ -242,6 +242,9 @@ body {
     display:flex;
     justify-content: center;
     margin: 1rem;
+    padding-left: 20rem;
+    padding-right: 20rem;
+    text-align: center;
 }
 
 
